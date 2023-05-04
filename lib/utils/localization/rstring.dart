@@ -7,4 +7,8 @@ class RString {
   static const String labelEmail = "Email";
   static const String labelHintEmail = "Masukkan email anda";
   static const String labelHintPassword = "Masukkan password anda";
+
+  static const String labelFirstName = "Nama Depan";
+  static const String labelLastName = "Nama Belakang";
+
 }

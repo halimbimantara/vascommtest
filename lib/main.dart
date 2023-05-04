@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vascommtest/ui/screens/auth/login/login_screen.dart';
+import 'package:vascommtest/ui/screens/auth/register/register_page.dart';
+import 'package:vascommtest/ui/screens/home/home_page.dart';
+import 'package:vascommtest/utils/routes.dart';
 import 'package:vascommtest/utils/utils.dart';
 
 void main() {
@@ -23,6 +26,28 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const LoginScreen(),
+      navigatorObservers: [routeObserver],
+      onGenerateRoute: (RouteSettings settings) {
+        switch (settings.name) {
+          case homeRoute:
+            return MaterialPageRoute(builder: (_) => const HomePage());
+          case loginRoute:
+            return MaterialPageRoute(builder: (_) => const LoginScreen());
+          case registerRoute:
+            return MaterialPageRoute(builder: (_) => const RegisterPage());
+
+          default:
+            return MaterialPageRoute(
+              builder: (_) {
+                return const Scaffold(
+                  body: Center(
+                    child: Text('Page not found :('),
+                  ),
+                );
+              },
+            );
+        }
+      },
     );
   }
 }
