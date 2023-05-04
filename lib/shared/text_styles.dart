@@ -15,7 +15,7 @@ final TextStyle kBodyText = GoogleFonts.poppins(
 const TextStyle kTextTitleLight = TextStyle(
   fontFamily: 'Gliroy',
   fontSize: 28.0,
-  fontWeight: FontWeight.w600,
+  fontWeight: FontWeight.w500,
   color: kOxfordBluePrimary,
 );
 const TextStyle kTextTitleBig = TextStyle(
