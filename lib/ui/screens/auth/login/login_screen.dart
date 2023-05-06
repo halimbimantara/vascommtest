@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:vascommtest/shared/text_styles.dart';
 import 'package:vascommtest/shared/themes.dart';
@@ -123,27 +125,7 @@ class _LoginScreen extends State<LoginScreen> {
                     SizedBox(
                       height: AppUtils.height / 40,
                     ),
-                    const KButtonCsThemes(
-                      height: 48,
-                      inputText: 'Login',
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text("Belum punya akun ?"),
-                        MaterialButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, registerRoute);
-                          },
-                          child: const Text(
-                            "Daftar Sekarang",
-                            style: TextStyle(
-                              color: kOxfordBluePrimary,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                    bottomContainer(context),
                   ],
                 ),
               ),
@@ -153,6 +135,38 @@ class _LoginScreen extends State<LoginScreen> {
       ),
     );
   }
+}
+
+Widget bottomContainer(BuildContext context) {
+  return Container(
+    margin: const EdgeInsetsDirectional.symmetric(horizontal: paddingDefault),
+    child: Column(
+      children: [
+        KButtonCsThemes(
+          onTap: () => Navigator.pushNamed(context, homeRoute),
+          height: 48,
+          inputText: 'Login',iconDrawableRight: const Icon(Icons.arrow_forward_outlined,color: Colors.white)
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text("Belum punya akun ?"),
+            MaterialButton(
+              onPressed: () {
+                Navigator.pushNamed(context, registerRoute);
+              },
+              child: const Text(
+                "Daftar Sekarang",
+                style: TextStyle(
+                  color: kOxfordBluePrimary,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
+    ),
+  );
 }
 
 class _LoginTextField extends StatefulWidget {

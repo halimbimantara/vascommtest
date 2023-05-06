@@ -6,8 +6,6 @@ class AppUtils {
   static late final GlobalKey<NavigatorState> navigatorKey;
   static late final GlobalKey<ScaffoldMessengerState> scaffoldMessengerKey;
 
-
-
   static BuildContext? get context => navigatorKey.currentContext;
 
   static EdgeInsets get padding {
