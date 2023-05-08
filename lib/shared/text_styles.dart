@@ -12,6 +12,8 @@ final TextStyle kSubtitle = GoogleFonts.poppins(
 
 final TextStyle kBodyText = GoogleFonts.poppins(
     fontSize: 13, fontWeight: FontWeight.w400, letterSpacing: 0.25);
+
+
 const TextStyle kTextTitleLight = TextStyle(
   fontFamily: 'Gliroy',
   fontSize: 28.0,
@@ -33,11 +35,28 @@ const TextStyle kTextTitleLabel = TextStyle(
 );
 
 
+const TextStyle kTextTitleLabelLight = TextStyle(
+  fontFamily: 'Gliroy',
+  fontSize: 16.0,
+  fontWeight: FontWeight.w500,
+  color: kOxfordBluePrimary,
+);
+
+
 TextStyle kTextTitleLightSmall(Color colors, double? fSize) {
   return TextStyle(
     fontFamily: 'Proxima',
     fontSize: fSize ?? 12.0,
     fontWeight: FontWeight.w600,
+    color: colors,
+  );
+}
+
+TextStyle kTextTitleCustomRegular(Color colors, double? fSize,FontWeight fWeight) {
+  return TextStyle(
+    fontFamily: 'Gliroy',
+    fontSize: fSize ?? 12.0,
+    fontWeight: fWeight,
     color: colors,
   );
 }

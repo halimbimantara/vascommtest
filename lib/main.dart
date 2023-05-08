@@ -18,7 +18,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       navigatorKey: AppUtils.navigatorKey,
       scaffoldMessengerKey: AppUtils.scaffoldMessengerKey,
@@ -35,7 +34,6 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(builder: (_) => const LoginScreen());
           case registerRoute:
             return MaterialPageRoute(builder: (_) => const RegisterPage());
-
           default:
             return MaterialPageRoute(
               builder: (_) {

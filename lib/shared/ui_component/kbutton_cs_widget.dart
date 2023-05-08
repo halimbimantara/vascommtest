@@ -34,20 +34,21 @@ class Popover extends StatelessWidget {
 class KButtonCsThemes extends StatelessWidget {
   final String inputText;
   final double height;
+  final Icon? iconDrawableRight;
+  final Function()? onTap;
 
-  const KButtonCsThemes({super.key, required this.inputText, required this.height});
+  const KButtonCsThemes({super.key, required this.inputText, required this.height,required this.onTap, required this.iconDrawableRight});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: AppUtils.width / 1.4,
       height: height,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
         color: kOxfordBluePrimary,
       ),
       child: MaterialButton(
-        onPressed: () {},
+        onPressed: onTap,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -64,10 +65,14 @@ class KButtonCsThemes extends StatelessWidget {
             const SizedBox(
               width: 20,
             ),
-            const Icon(Icons.arrow_forward_outlined,color: Colors.white,)
+             setRightIcon(iconDrawableRight)
           ],
         ),
       ),
     );
   }
+}
+
+Widget setRightIcon(Icon? iconDrawableRight) {
+  return iconDrawableRight != null ?  const Icon(Icons.arrow_forward_outlined,color: Colors.white):Container();
 }

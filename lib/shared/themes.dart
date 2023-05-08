@@ -18,11 +18,15 @@ const Color dividerColor = Color(0xffe5e5e5);
 const Color kBlueTeal = Color(0xFF0D47A1);
 const Color kBlueText = Color(0xFF1D334F);
 const Color kBlueAccent = Color(0xFF0097D8);
+const Color kBlueLightAccent = Color(0xFFDAE9F9);
 const Color kTextBlue = Color(0xFF3178BD);
+const Color kTextBlueLightDark = Color(0xFF597393);
 const Color kGreen = Color(0xFFB6D442);
 const Color kRedDark = Color(0xFFFF0000);
 const Color redClose = Color(0xffcb2519);
 const Color kRedBlack = Color(0xFFE20000);
+
+const paddingDefault = 20.0;
 
 const kColorScheme = ColorScheme(
   primary: kRedBlack,
