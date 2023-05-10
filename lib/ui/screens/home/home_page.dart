@@ -436,7 +436,7 @@ Widget homeScreen(BuildContext context, GlobalKey<ScaffoldState> scaffoldKey) =>
           height: 17,
         ),
         SearchBox(),
-        const HomeBodyBox(),
+        // const HomeBodyBox(),
       ],
     );
 
